@@ -7,6 +7,7 @@ import android.os.Bundle;
 import it.unibo.smartgh.R;
 import it.unibo.smartgh.utility.ActivityUtilities;
 import it.unibo.smartgh.view.homepage.HomeFragment;
+import it.unibo.smartgh.view.manualControl.ManualControlFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -18,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (savedInstanceState == null) {
             //insert first fragment.
-            ActivityUtilities.insertFragment(this, new HomeFragment(), HomeFragment.class.getSimpleName());
+            ActivityUtilities.insertFragment(this, new ManualControlFragment(), ManualControlFragment.class.getSimpleName());
         }
     }
 }
