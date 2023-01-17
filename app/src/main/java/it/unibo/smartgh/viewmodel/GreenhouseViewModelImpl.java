@@ -16,6 +16,7 @@ import java.util.Map;
 
 import it.unibo.smartgh.data.greenhouse.GreenhouseRepository;
 import it.unibo.smartgh.data.greenhouse.GreenhouseRepositoryImpl;
+import it.unibo.smartgh.entity.greenhouse.Modality;
 import it.unibo.smartgh.entity.parameter.ParameterType;
 import it.unibo.smartgh.entity.parameter.ParameterValue;
 import it.unibo.smartgh.entity.parameter.ParameterValueImpl;
@@ -35,6 +36,9 @@ public class GreenhouseViewModelImpl extends AndroidViewModel implements Greenho
     protected final MutableLiveData<Map<ParameterType, ParameterValue>> parameterValueLiveData;
     protected final MutableLiveData<Map<ParameterType, String>> optimalValuesLiveData;
 
+    private final MutableLiveData<Modality> modalityLiveData;
+
+
     public GreenhouseViewModelImpl(@NonNull Application application) {
         super(application);
         parameterValueLiveData = new MutableLiveData<>(initializeMap(new ParameterValueImpl()));
@@ -43,6 +47,7 @@ public class GreenhouseViewModelImpl extends AndroidViewModel implements Greenho
         parameterList = initializeList();
         parametersLiveData = new MutableLiveData<>(parameterList);
         statusLiveData = new MutableLiveData<>();
+        modalityLiveData = new MutableLiveData<>();
         Config config = ActivityUtilities.getConfig(application);
         greenhouseRepository = new GreenhouseRepositoryImpl(this, config.getHost(), config.getPort(), config.getSocketPort());
         greenhouseRepository.initializeData();
@@ -77,18 +82,17 @@ public class GreenhouseViewModelImpl extends AndroidViewModel implements Greenho
     }
 
     @Override
-    public void updateParameterInfo(ParameterType parameterType, Double minBrightness, Double maxBrightness, String unit) {
-        // todo: togliere
-        final String optimalValue = minBrightness + " " + unit + " - " + maxBrightness + " " + unit;
+    public void updateParameterInfo(ParameterType parameterType, Double min, Double max, String unit) {
         Map<ParameterType, String> map = optimalValuesLiveData.getValue();
         if (map != null) {
-            map.put(parameterType, minBrightness + " " + unit + " - " + maxBrightness + " " + unit);
+            map.put(parameterType, min + " " + unit + " - " + max + " " + unit);
         }
         optimalValuesLiveData.postValue(map);
     }
 
     @Override
     public void updateParameterValue(ParameterType parameter, ParameterValue parameterValue) {
+        System.out.println("update parameter value");
         Map<ParameterType, ParameterValue> map = parameterValueLiveData.getValue();
         if (map != null) {
             map.put(parameter, parameterValue);
@@ -128,13 +132,28 @@ public class GreenhouseViewModelImpl extends AndroidViewModel implements Greenho
         return statusLiveData;
     }
 
-    private Double paramOptimalValue(String type, String param, Plant plant){
+    private Double paramOptimalValue(String type, String param, Plant plant) {
         String paramName = param.substring(0, 1).toUpperCase() + param.substring(1);
         try {
             Class<?> c = Class.forName(Plant.class.getName());
-            return (Double) c.getDeclaredMethod("get"+type+paramName).invoke(plant);
-        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException | IllegalAccessException e) {
+            return (Double) c.getDeclaredMethod("get" + type + paramName).invoke(plant);
+        } catch (ClassNotFoundException | NoSuchMethodException | InvocationTargetException |
+                 IllegalAccessException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    public void changeModality(Modality modality) {
+        this.greenhouseRepository.changeModality(modality);
+    }
+
+    @Override
+    public void updateModality(Modality actualModality) {
+        this.modalityLiveData.postValue(actualModality);
+    }
+
+    @Override
+    public LiveData<Modality> getModalityLiveData() {
+        return this.modalityLiveData;
     }
 }

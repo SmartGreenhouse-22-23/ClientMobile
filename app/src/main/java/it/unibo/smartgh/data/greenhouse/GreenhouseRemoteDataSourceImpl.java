@@ -6,6 +6,7 @@ import com.google.gson.Gson;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
+import java.util.Map;
 import java.util.Optional;
 
 import io.vertx.core.Vertx;
@@ -15,6 +16,7 @@ import io.vertx.core.json.JsonObject;
 import io.vertx.ext.web.client.WebClient;
 import io.vertx.ext.web.codec.BodyCodec;
 import it.unibo.smartgh.entity.greenhouse.GreenhouseImpl;
+import it.unibo.smartgh.entity.greenhouse.Modality;
 import it.unibo.smartgh.entity.parameter.ParameterType;
 import it.unibo.smartgh.entity.parameter.ParameterValue;
 import it.unibo.smartgh.entity.parameter.ParameterValueImpl;
@@ -59,6 +61,17 @@ public class GreenhouseRemoteDataSourceImpl implements GreenhouseRemoteDataSourc
         this.server.close();
     }
 
+    @Override
+    public void putModality(String greenhouseId, Modality modality) {
+        WebClient client = WebClient.create(vertx);
+        client.post(port, host, GREENHOUSE_PATH + "/modality")
+                .putHeader("Content-Type", "application/json")
+                .sendJsonObject(new JsonObject()
+                        .put("id", greenhouseId)
+                        .put("modality", modality.name())
+                );
+    }
+
     private void setSocket() {
         server = vertx.createHttpClient();
         server.webSocket(socketPort, this.host, "/",
@@ -72,7 +85,6 @@ public class GreenhouseRemoteDataSourceImpl implements GreenhouseRemoteDataSourc
                     Optional<ParameterType> parameter = ParameterType.parameterOf(json.getString("parameterName"));
                     parameter.ifPresent(parameterType -> {
                         final ParameterValue parameterValue = gson.fromJson(msg, ParameterValueImpl.class);
-                        parameterValue.setUnit(plant.getUnitMap().get(parameterType.getName()));
                         this.repository.updateParameterValue(parameterType, parameterValue);
                     });
             }});
@@ -116,7 +128,6 @@ public class GreenhouseRemoteDataSourceImpl implements GreenhouseRemoteDataSourc
                                             value.setUnit(plant.getUnitMap().get(p.getName()));
                                             this.repository.updateParameterValue(p, value);
                                         }).onFailure(Throwable::printStackTrace)));
-
     }
 
     private Double paramOptimalValue(String type, String param, Plant plant){
