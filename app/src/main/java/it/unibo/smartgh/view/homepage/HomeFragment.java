@@ -55,6 +55,7 @@ public class HomeFragment extends Fragment {
         this.activity = getActivity();
         if (activity != null) {
             ActivityUtilities.setUpToolbar((AppCompatActivity) activity, "Smart Greenhouse");
+            ActivityUtilities.setVisibleToolbarNavigationIcon((AppCompatActivity) activity, false);
             setRecyclerView();
             final TextView plantName = view.findViewById(R.id.plant_name);
             final ImageView plantImage = view.findViewById(R.id.plant_image);
