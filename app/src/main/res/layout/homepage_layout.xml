@@ -73,7 +73,11 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:id="@+id/manual_control_button"
-        android:text="@string/imposta_controllo_manuale"/>
+        style="@style/Widget.App.Button.OutlinedButton.IconOnly"
+        android:drawableLeft="@drawable/manual_control"
+        android:text="@string/imposta_controllo_manuale">
+
+    </Button>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
