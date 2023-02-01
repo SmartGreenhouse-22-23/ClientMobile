@@ -7,7 +7,6 @@ import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
@@ -62,12 +61,17 @@ public class GreenhouseViewModelImpl extends AndroidViewModel implements Greenho
     public void updatePlantInformation(Plant plant) {
         this.plantLiveData.postValue(plant);
         this.parameterList.replaceAll(p -> {
-            final PlantParameter plantParameter = plant.getParameters().get(ParameterType.parameterOf(p.component1().getName()).get());
-            final String unit = plantParameter.getUnit();
-            double min = plantParameter.getMin();
-            double max = plantParameter.getMax();
-            final String optimalValue = min + " - " + max + " " + unit;
-            return new Triple<>(p.component1(), p.component2(), optimalValue);
+            final ParameterType type = ParameterType.parameterOf(p.component1().getName()).get();
+            if (plant.getParameters().containsKey(type)) {
+                final PlantParameter plantParameter = plant.getParameters().get(type);
+                final String unit = plantParameter.getUnit();
+                double min = plantParameter.getMin();
+                double max = plantParameter.getMax();
+                final String optimalValue = min + " - " + max + " " + unit;
+                return new Triple<>(p.component1(), p.component2(), optimalValue);
+            } else {
+                return p;
+            }
         });
         this.parametersLiveData.postValue(this.parameterList);
     }
