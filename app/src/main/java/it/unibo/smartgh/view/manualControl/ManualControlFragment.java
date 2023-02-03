@@ -65,8 +65,8 @@ public class ManualControlFragment extends Fragment {
                     operationViewModel.getLastParameterOperation(ParameterType.TEMPERATURE.getName());
                     operationViewModel.getLastParameterOperation(ParameterType.HUMIDITY.getName());
                     operationViewModel.getLastParameterOperation(ParameterType.SOIL_MOISTURE.getName());
-                    manualControlSwitch.setChecked(true);
                 }
+                manualControlSwitch.setChecked(isManual);
                 this.operationAdapter.updateModality(isManual);
             });
             manualControlSwitch.setOnCheckedChangeListener((button, isChecked) ->{
