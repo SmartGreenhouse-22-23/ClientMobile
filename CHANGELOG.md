@@ -1,3 +1,24 @@
+## [1.1.1](https://github.com/SmartGreenhouse-22-23/ClientMobile/compare/1.1.0...1.1.1) (2023-02-25)
+
+
+### Build and continuous integration
+
+* **deps:** update actions/checkout action to v3 ([914e95d](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/914e95d7d69bcefe62f7451514c79fbc5550b149))
+* **deps:** update dependency macos github actions runner to v12 ([da8a98c](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/da8a98cf209cc325c69473169d0da9a263af05d1))
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v7.6.1 ([158ffa8](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/158ffa83c45b042561e4f54ead0a10c369ecef9b))
+* **deps:** update androidx to v1.6.1 ([a28c8bd](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/a28c8bd005a3d7ad146231678b6f0dc6b061c7ee))
+* **deps:** update dependency androidx.test:rules to v1.5.0 ([c5285c4](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/c5285c4c2db0f3e084ee35d1f0298b88217147e1))
+* **deps:** update dependency androidx.test:runner to v1.5.2 ([66ceb54](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/66ceb54d25803327ffb95c868e3bf93b0991d174))
+* **deps:** update dependency org.awaitility:awaitility to v3.1.6 ([f8a3294](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/f8a3294bcbf9e6484386d318211e5cc13f9f29c2))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v1.8.10 ([1f55e29](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/1f55e29474da8c80a3381ab183169ed7ee2dbeea))
+* **deps:** update plugin gitsemver to v0.4.0 ([d20e26c](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/d20e26c5c21caa04d0b6c749ce53d3d6b1853620))
+* **deps:** update plugin gitsemver to v1 ([a69b686](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/a69b6862d0ddd3a8ac3149d0573cd7a3445e670d))
+* **deps:** update vertx to v4.3.8 ([1a3963b](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/1a3963b462f41126438b4856e7d377114bb89a56))
+
 ## [1.1.0](https://github.com/SmartGreenhouse-22-23/ClientMobile/compare/1.0.2...1.1.0) (2023-02-06)
 
 
