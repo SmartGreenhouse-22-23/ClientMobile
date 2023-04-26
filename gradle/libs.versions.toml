@@ -1,6 +1,6 @@
 [versions]
 vertx = "4.4.1"
-junit = "5.9.2"
+junit = "5.9.3"
 gson = "2.8.8"
 androidx = "1.6.1"
 constraintlayout = "2.0.4"
