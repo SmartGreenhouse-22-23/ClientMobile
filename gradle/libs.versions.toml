@@ -1,5 +1,5 @@
 [versions]
-vertx = "4.4.3"
+vertx = "4.4.4"
 junit = "5.9.3"
 gson = "2.8.8"
 androidx = "1.6.1"
