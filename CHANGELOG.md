@@ -1,3 +1,42 @@
+## [1.1.2](https://github.com/SmartGreenhouse-22-23/ClientMobile/compare/1.1.1...1.1.2) (2023-06-30)
+
+
+### Dependency updates
+
+* **core-deps:** update dependency gradle to v7.6.2 ([96fa11e](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/96fa11e4209551e44bf2e5043881af4caf347ff0))
+* **deps:** update dependency androidx.test.ext:junit to v1.1.5 ([8d8720b](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/8d8720ba0dfd3d7d2c8d72b3f0bf91aea608987c))
+* **deps:** update dependency io.vertx:vertx-mqtt to v4.4.0 ([953f444](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/953f4443f0ca65bc9a9fdf9e16b30d0700d17dd3))
+* **deps:** update dependency jacoco to v0.8.10 ([8baaf67](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/8baaf679dfa3944e34752515ce66c339fbb8f7e4))
+* **deps:** update dependency jacoco to v0.8.9 ([a54cabd](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/a54cabd835e7d21d195ecd27d643ae0b6f772417))
+* **deps:** update dependency org.jacoco:org.jacoco.build to v0.8.10 ([486a504](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/486a5048a26a931fbce208c5528b621d420100c6))
+* **deps:** update dependency org.jacoco:org.jacoco.build to v0.8.9 ([095506d](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/095506d08295d0ac8942ce696ecdf8abc7cc21b3))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v1.8.20 ([683ea30](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/683ea306c91702214d1359c048b5f73eb7a4b7fe))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v1.8.21 ([e3cd52f](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/e3cd52fd6a9d332d4cb9f8b43f19d6a7b4ba21c9))
+* **deps:** update dependency org.jetbrains.kotlin:kotlin-gradle-plugin to v1.8.22 ([8457783](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/845778379fe08771fe367030881133e420f1a562))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.17 ([f394c50](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/f394c50000075201f7b4a711a8491ed2d2c08f1d))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.20 ([1d502b4](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/1d502b461435e1bc679418494c47760d4c31efd8))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.21 ([b7b6223](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/b7b6223319ea1c847fd6f89e1d714ea496b71cd3))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.24 ([9827aea](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/9827aea6f896a7423ef69c4142305b592b68dc71))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.25 ([ad7e47d](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/ad7e47d6fdd45cb8d695e3b350577ebf2338826a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.26 ([668ab44](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/668ab440adb4a1644735997e5833c178c4bf1c21))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.27 ([d4e3f7a](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/d4e3f7ad280a5a4f31ba5fae53dcc0a350d051d2))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.29 ([ca12fc3](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/ca12fc31393d633d8bd4ddcdc3b44288ebf27761))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.30 ([f140458](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/f14045878959137ab4a65083af4c5cc057b0d78a))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.32 ([a4bb47c](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/a4bb47c8cf547b855a67493f872d71002476e8f7))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.33 ([bb5be1c](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/bb5be1c661aca009fc8f4d6f0bb8371ff67836c9))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.34 ([5e6f8b3](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/5e6f8b3e86824b13027dc04fc2ae9bb5f9523790))
+* **deps:** update dependency semantic-release-preconfigured-conventional-commits to v1.1.37 ([a3b3999](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/a3b3999785e23e91bd62260525dcce4102a99866))
+* **deps:** update junit5 monorepo to v5.9.3 ([31ef17e](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/31ef17e27a56cc59d8f59077926a9741c75167db))
+* **deps:** update plugin gitsemver to v1.1.10 ([4adbb76](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/4adbb761032b1d73dd6ccf4491d5542024d1bede))
+* **deps:** update plugin gitsemver to v1.1.4 ([f448787](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/f448787c2aea4798ec16c5905d906f63bf0961f1))
+* **deps:** update plugin gitsemver to v1.1.6 ([4501bb8](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/4501bb80c14c76918ff425047d8fb7a20da469ec))
+* **deps:** update plugin gitsemver to v1.1.7 ([4ba0499](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/4ba04990051071d1002b82b814a8fa99921640c7))
+* **deps:** update plugin gitsemver to v1.1.9 ([b3e67a5](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/b3e67a5cc8fbb5020a7baa993a5ec1917db01ed1))
+* **deps:** update vertx to v4.4.1 ([96072e8](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/96072e845a64355be2193bacc749e2602ac8a9aa))
+* **deps:** update vertx to v4.4.2 ([1b3dcfa](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/1b3dcfa166fa4367882a2d9ce2745df1c23e02ef))
+* **deps:** update vertx to v4.4.3 ([7265f93](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/7265f9385bafdcb49414e8010365db6efdff4c4a))
+* **deps:** update vertx to v4.4.4 ([ea98237](https://github.com/SmartGreenhouse-22-23/ClientMobile/commit/ea982377bc0ea9077ebe13a571e73641ac137d73))
+
 ## [1.1.1](https://github.com/SmartGreenhouse-22-23/ClientMobile/compare/1.1.0...1.1.1) (2023-02-25)
 
 
