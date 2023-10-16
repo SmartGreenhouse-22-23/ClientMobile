@@ -12,7 +12,7 @@ espresso = "3.3.0"
 rules = "1.5.0"
 runner = "1.5.2"
 awaitility = "3.1.6"
-jacoco = "0.8.10"
+jacoco = "0.8.11"
 
 [libraries]
 vertx-core = {module = "io.vertx:vertx-core", version.ref = "vertx"}
