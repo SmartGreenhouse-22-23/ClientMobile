@@ -57,6 +57,6 @@ androidx-test = [
 ]
 
 [plugins]
-gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin:1.1.15"
+gitSemVer = "org.danilopianini.git-sensitive-semantic-versioning-gradle-plugin:2.0.0"
 jacocoCoverage = "com.vanniktech.android.junit.jacoco:0.16.0"
 javadocAndroid = "com.vanniktech.android.javadoc:0.3.0"
