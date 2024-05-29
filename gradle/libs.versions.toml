@@ -2,7 +2,7 @@
 vertx = "4.4.6"
 junit = "5.10.0"
 gson = "2.8.8"
-androidx = "1.6.1"
+androidx = "1.7.0"
 constraintlayout = "2.0.4"
 picasso = "2.8"
 android = "7.0.4"
